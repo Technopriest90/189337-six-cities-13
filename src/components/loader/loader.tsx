@@ -5,10 +5,10 @@ import styles from './loader.module.css';
 function Loader() {
   const isLoading = useAppSelector(getIsLoading);
   return (
-    isLoading &&
-    <div className={styles.overlay}>
-      <div className={styles.spinner} />
-    </div>
+    isLoading ?
+      <div className={styles.overlay}>
+        <div className={styles.spinner} />
+      </div> : null
   );
 }
 
